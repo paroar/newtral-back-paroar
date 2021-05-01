@@ -29,21 +29,22 @@ politiciansRouter.get("/:politicianId", async (req, res) => {
 
 politiciansRouter.post("/", async (req, res) => {
     const politician = new Politician({
-        CARGO: req.body.CARGO,
-        CARGO_PARA_FILTRO: req.body.CARGO_PARA_FILTRO,
-        CCAA: req.body.CCAA,
-        COMPLEMENTOS_SUELDO: req.body.COMPLEMENTOS_SUELDO,
-        GENERO: req.body.GENERO,
-        INSTITUCION: req.body.INSTITUCION,
-        OTRASDIETASEINDEMNIZACIONES_SUELDO: req.body.OTRASDIETASEINDEMNIZACIONES_SUELDO,
-        PAGASEXTRA_SUELDO: req.body.PAGASEXTRA_SUELDO,
+        TITULAR: req.body.TITULAR,
         PARTIDO: req.body.PARTIDO,
         PARTIDO_PARA_FILTRO: req.body.PARTIDO_PARA_FILTRO,
-        RETRIBUCIONANUAL: req.body.RETRIBUCIONANUAL,
-        RETRIBUCIONMENSUAL: req.body.RETRIBUCIONMENSUAL,
+        GENERO: req.body.GENERO,
+        CARGO: req.body.CARGO,
+        CARGO_PARA_FILTRO: req.body.CARGO_PARA_FILTRO,
+        INSTITUCION: req.body.INSTITUCION,
+        CCAA: req.body.CCAA,
         SUELDOBASE_SUELDO: req.body.SUELDOBASE_SUELDO,
-        TITULAR: req.body.TITULAR,
+        COMPLEMENTOS_SUELDO: req.body.COMPLEMENTOS_SUELDO,
+        PAGASEXTRA_SUELDO: req.body.PAGASEXTRA_SUELDO,
+        OTRASDIETASEINDEMNIZACIONES_SUELDO: req.body.OTRASDIETASEINDEMNIZACIONES_SUELDO,
         TRIENIOS_SUELDO: req.body.TRIENIOS_SUELDO,
+        RETRIBUCIONMENSUAL: req.body.RETRIBUCIONMENSUAL,
+        RETRIBUCIONANUAL: req.body.RETRIBUCIONANUAL,
+        OBSERVACIONES: req.body.OBSERVACIONES,
     })
 
     try {
@@ -60,21 +61,22 @@ politiciansRouter.patch("/:politicianId", async (req, res) => {
             { _id: req.params.politicianId },
             {
                 $set: {
-                    CARGO: req.body.CARGO,
-                    CARGO_PARA_FILTRO: req.body.CARGO_PARA_FILTRO,
-                    CCAA: req.body.CCAA,
-                    COMPLEMENTOS_SUELDO: req.body.COMPLEMENTOS_SUELDO,
-                    GENERO: req.body.GENERO,
-                    INSTITUCION: req.body.INSTITUCION,
-                    OTRASDIETASEINDEMNIZACIONES_SUELDO: req.body.OTRASDIETASEINDEMNIZACIONES_SUELDO,
-                    PAGASEXTRA_SUELDO: req.body.PAGASEXTRA_SUELDO,
+                    TITULAR: req.body.TITULAR,
                     PARTIDO: req.body.PARTIDO,
                     PARTIDO_PARA_FILTRO: req.body.PARTIDO_PARA_FILTRO,
-                    RETRIBUCIONANUAL: req.body.RETRIBUCIONANUAL,
-                    RETRIBUCIONMENSUAL: req.body.RETRIBUCIONMENSUAL,
+                    GENERO: req.body.GENERO,
+                    CARGO: req.body.CARGO,
+                    CARGO_PARA_FILTRO: req.body.CARGO_PARA_FILTRO,
+                    INSTITUCION: req.body.INSTITUCION,
+                    CCAA: req.body.CCAA,
                     SUELDOBASE_SUELDO: req.body.SUELDOBASE_SUELDO,
-                    TITULAR: req.body.TITULAR,
+                    COMPLEMENTOS_SUELDO: req.body.COMPLEMENTOS_SUELDO,
+                    PAGASEXTRA_SUELDO: req.body.PAGASEXTRA_SUELDO,
+                    OTRASDIETASEINDEMNIZACIONES_SUELDO: req.body.OTRASDIETASEINDEMNIZACIONES_SUELDO,
                     TRIENIOS_SUELDO: req.body.TRIENIOS_SUELDO,
+                    RETRIBUCIONMENSUAL: req.body.RETRIBUCIONMENSUAL,
+                    RETRIBUCIONANUAL: req.body.RETRIBUCIONANUAL,
+                    OBSERVACIONES: req.body.OBSERVACIONES,
                 }
             })
         res.json(updatedPolitician)

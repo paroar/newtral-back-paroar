@@ -17,11 +17,11 @@ const PoliticianSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    CARGO_PARA_FILTRO: {
+    CARGO: {
         type: String,
         required: true
     },
-    CARGO: {
+    CARGO_PARA_FILTRO: {
         type: String,
         required: true
     },
@@ -66,7 +66,7 @@ const PoliticianSchema = mongoose.Schema({
     }
     ,
     OBSERVACIONES: {
-        type: Number,
+        type: String,
         required: true
     }
 }, { collection: 'politicians' })
